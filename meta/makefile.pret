@@ -1,0 +1,12 @@
+# This file provides instructions for packaging.
+
+@prefix : <http://ontologi.es/doap-deps#>.
+
+`Types-Self`
+	:runtime-requirement    [ :on "perl 5.008001"^^:CpanId ];
+	:runtime-requirement    [ :on "Types::Standard 1.012"^^:CpanId ];
+	:runtime-requirement    [ :on "Role::Hooks"^^:CpanId ];
+	:test-requirement       [ :on "Test::More 0.96"^^:CpanId ];
+	:test-requirement       [ :on "Role::Tiny"^^:CpanId ];
+	:develop-recommendation [ :on "Dist::Inkt 0.001"^^:CpanId ];
+	.
