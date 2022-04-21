@@ -4,7 +4,7 @@
 
 `Types-Self`
 	:programming-language "Perl" ;
-	:shortdesc            "provides a "Self" type constraint, referring to the caller class or role";
+	:shortdesc            "provides a \"Self\" type constraint, referring to the caller class or role";
 	:homepage             <https://metacpan.org/release/Types-Self>;
 	:download-page        <https://metacpan.org/release/Types-Self>;
 	:bug-database         <https://github.com/tobyink/p5-types-self/issues>;
