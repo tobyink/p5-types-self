@@ -112,10 +112,20 @@ Types::Self - provides a "Self" type constraint, referring to the caller class o
 
 =head1 DESCRIPTION
 
+=head2 C<< Self >>
+
 This module exports a C<Self> type constraint which consrtains values to be
 blessed objects in the same class as the package it was imported into, or
 blessed objects which consume the role it was imported into. It should do
 the right thing with inheritance.
+
+Using C<Self> in a class means the same as C<< InstanceOf[__PACKAGE__] >>.
+(See B<InstanceOf> in L<Types::Standard>.)
+
+Using C<Self> in a role means the same as C<< ConsumerOf[__PACKAGE__] >>.
+(See B<ConsumerOf> in L<Types::Standard>.)
+
+=head2 C<< is_Self >>
 
 This module also exports C<is_Self>, which returns a boolean.
 
@@ -137,6 +147,8 @@ This module also exports C<is_Self>, which returns a boolean.
     return $me;
   }
 
+=head2 C<< assert_Self >>
+
 The module also exports C<assert_Self> which acts like C<is_Self> but instead
 of returning a boolean, either lives or dies. This can be useful is you need
 to check that the first argument to a function is a blessed object.
@@ -148,10 +160,26 @@ to check that the first argument to a function is a blessed object.
     return $self;
   }
 
+=head2 C<< to_Self >>
+
 The module also exports C<to_Self> which will attempt to coerce other types
 to the B<Self> type.
 
+Currently adding coercions to B<Self> is a little tricky.
+
+=head2 Exporting
+
 Only C<Self> is exported by default.
+
+Other functions need to be requested:
+
+  use Types::Self -all;
+
+Functions can be renamed:
+
+  use Types::Self
+    'Self'    => { -as => 'ThisClass' },
+    'is_Self' => { -as => 'is_ThisClass' };
 
 =head1 BUGS
 
