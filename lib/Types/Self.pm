@@ -175,6 +175,8 @@ This module also exports C<is_Self>, which returns a boolean.
     return $me;
   }
 
+C<< is_Self( $var ) >> can also be written as C<< Self->check( $var ) >>.
+
 =head2 C<< assert_Self >>
 
 The module also exports C<assert_Self> which acts like C<is_Self> but instead
@@ -188,10 +190,14 @@ to check that the first argument to a function is a blessed object.
     return $self;
   }
 
+C<< assert_Self( $var ) >> can also be written as C<< Self->( $var ) >>.
+
 =head2 C<< to_Self >>
 
 The module also exports C<to_Self> which will attempt to coerce other types
 to the B<Self> type.
+
+C<< to_Self( $var ) >> can also be written as C<< Self->coerce( $var ) >>.
 
 =head2 C<< coercions_for_Self >>
 
