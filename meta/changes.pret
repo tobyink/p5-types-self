@@ -4,3 +4,9 @@
 	issued  2022-04-21;
 	label   "Initial release".
 
+`Types-Self 0.002 cpan:TOBYINK`
+	issued  2022-06-07;
+	changeset [
+		item "Expanded documentation."^^Documentation;
+		item "Added a `coercions_for_Self` function."^^Addition;
+	].
