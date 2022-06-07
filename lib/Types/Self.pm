@@ -142,7 +142,7 @@ Types::Self - provides a "Self" type constraint, referring to the caller class o
 
 =head2 C<< Self >>
 
-This module exports a C<Self> type constraint which consrtains values to be
+This module exports a C<Self> type constraint which constrains values to be
 blessed objects in the same class as the package it was imported into, or
 blessed objects which consume the role it was imported into. It should do
 the right thing with inheritance.
